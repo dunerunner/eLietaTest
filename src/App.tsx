@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
+
+import Countries from "./components/countries/Countries";
+import Country from "./components/country/Country";
+
+const routing = (
+    <Router>
+        <div>
+            <Route path="/country/:code" component={Country}/>
+            <Route path="/countries" component={Countries}/>
+            <Route exact path="/" >
+                <Redirect to="/countries" />
+            </Route>
+        </div>
+    </Router>
+);
+const App = () => {
+    return routing;
+};
 
 export default App;

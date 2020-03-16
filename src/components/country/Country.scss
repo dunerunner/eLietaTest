@@ -1,0 +1,29 @@
+.country {
+  &-card {
+    margin-top: 50px;
+  }
+
+  &-field {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      display: inline-block;
+      width: 150px;
+      font-weight: bold;
+    }
+  }
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-language {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.back-btn {
+  margin-top: 30px;
+}

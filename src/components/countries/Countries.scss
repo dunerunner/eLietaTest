@@ -1,0 +1,13 @@
+.countries {
+  &-table {
+    margin-top: 50px;
+
+    &__row {
+      cursor: pointer;
+
+      &:hover {
+        background: #ccc !important;
+      }
+    }
+  }
+}
